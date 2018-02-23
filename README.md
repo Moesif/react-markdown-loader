@@ -1,4 +1,12 @@
-# react-markdown-loader
+# :sparkles: react-markdown-loader
+
+[![npm][npm]][npm-url]
+
+[![node][node]][node-url]
+[![deps][deps]][deps-url]
+[![tests][tests]][tests-url]
+[![coverage][cover]][cover-url]
+[![license][license]][license-url]
 
 Transform Markdown with interpolated JS expressions and JSX elements into React component Webpack modules.
 
@@ -173,7 +181,7 @@ module.exports = {
 
 ### Adding emojis
 
-You can replace `:emoji:` shortcodes to real UTF-8 emojis by installing [`remark-emoji`](https://github.com/rhysd/remark-emoji) using `npm`:
+:wink: You can replace `:emoji:` shortcodes to real UTF-8 emojis by installing [`remark-emoji`](https://github.com/rhysd/remark-emoji) using `npm`:
 
 ```bash
 npm install --save remark-emoji
@@ -214,3 +222,16 @@ module.exports = {
 # License
 
 [MIT](LICENSE) &copy; [Hugo Manrique](https://hugmanrique.me)
+
+[npm]: https://img.shields.io/npm/v/@hugmanrique/react-markdown-loader.svg
+[npm-url]: https://npmjs.com/package/@hugmanrique/react-markdown-loader
+[node]: https://img.shields.io/node/v/@hugmanrique/react-markdown-loader.svg
+[node-url]: https://nodejs.org
+[deps]: https://img.shields.io/david/hugmanrique/react-markdown-loader.svg
+[deps-url]: https://david-dm.org/hugmanrique/react-markdown-loader
+[tests]: https://img.shields.io/travis/hugmanrique/react-markdown-loader/master.svg
+[tests-url]: https://travis-ci.org/hugmanrique/react-markdown-loader
+[licenses-url]: https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fhugmanrique%2Freact-markdown-loader?ref=badge_shield
+[licenses]: https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fhugmanrique%2Freact-markdown-loader.svg?type=shield
+[cover]: https://img.shields.io/coveralls/hugmanrique/react-markdown-loader.svg
+[cover-url]: https://coveralls.io/r/hugmanrique/react-markdown-loader/
