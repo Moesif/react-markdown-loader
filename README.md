@@ -41,7 +41,7 @@ module.exports = {
       }
     ]
   }
-}
+};
 ```
 
 Then, create a file named `hello-world.md`. This will contain the content we want to render:
@@ -110,7 +110,7 @@ As the parsed Markdown is passed into [rehype](https://github.com/wooorm/rehype)
       require('rehype-picture')
     ]
   }
-}
+};
 ```
 
 ## Examples
@@ -152,7 +152,7 @@ module.exports = {
       }
     ]
   }
-}
+};
 ```
 
 > Note: If you want to pass any `rehype-highlight` [options](https://github.com/rehypejs/rehype-highlight#options), you can pass in an array where the first object is the highlight plugin and the second one is the options array:
@@ -208,7 +208,7 @@ module.exports = {
       }
     ]
   }
-}
+};
 ```
 
 # License
