@@ -1,0 +1,68 @@
+$font-size-data: (
+  heading: 1.5rem,
+  subheading: 1.125rem,
+  base: 1rem,
+  small: .875rem,
+  smaller: .75rem
+);
+
+$default-font-size: 16px;
+
+$font-weight-data: (
+  light: 300,
+  normal: 400,
+  medium: 500,
+  bold: 700
+);
+
+$line-height-data: (
+  large: 2,
+  base: 1.5,
+  small: 1.25,
+  none: 1
+);
+
+$font-family-data: (
+  base: #{system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif},
+  mono: #{Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace}
+);
+
+@function font-family($family: base) {
+  $value: map-get($font-family-data, $family);
+
+  @if $value != null {
+    @return $value;
+  } @else {
+    @error 'Font family `#{$family}` not found';
+  }
+}
+
+@function line-height($variant: base) {
+  $value: map-get($line-height-data, $variant);
+
+  @if $value != null {
+    @return $value;
+  } @else {
+    @error 'Line height variant `#{$variant}` not found';
+  }
+}
+
+@function font-size($variant: base) {
+  $value: map-get($font-size-data, $variant);
+
+  @if $value != null {
+    @return $value;
+  } @else {
+    @error 'Font size variant `#{$variant}` not found';
+  }
+}
+
+@function font-weight($variant: normal) {
+  $value: map-get($font-weight-data, $variant);
+
+  @if $value != null {
+    @return $value;
+  } @else {
+    @error 'Font weight variant `#{$variant}` not found';
+  }
+}

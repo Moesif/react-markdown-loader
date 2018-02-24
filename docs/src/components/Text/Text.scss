@@ -1,0 +1,15 @@
+@import 'foundation';
+
+.title {
+  margin-bottom: spacing(1);
+  line-height: line-height(none);
+  font-weight: font-weight(medium);
+  font-size: font-size(heading);
+  color: color(text, dark);
+}
+
+.lead {
+  margin-bottom: spacing(1);
+  font-size: font-size(subheading);
+  color: color(text, light);
+}

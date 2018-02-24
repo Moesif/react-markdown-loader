@@ -1,0 +1,10 @@
+@import 'foundation';
+
+.container {
+  flex-grow: 1;
+  @include card();
+
+  @include media-min($layout-breakpoint) {
+    margin-left: spacing(8);
+  }
+}

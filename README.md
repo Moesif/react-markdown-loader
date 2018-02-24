@@ -12,6 +12,7 @@ Transform Markdown with interpolated JS expressions and JSX elements into React 
 ## Features
 
 * Interpolates JSX expressions and JSX elements between `{{}}` delimiters.
+* Avoid having to include Markdown rendering and code highlighting libraries on the client bundle.
 * Produces ES6+ code which can be run through `babel-loader`.
 * Supports code highlighting by using [rehype-highlight](https://github.com/rehypejs/rehype-highlight) (Check out the [tutorial](#adding-code-highlighting)).
 * Markdown gets processed through [remark](https://github.com/wooorm/remark) and [rehype](https://github.com/wooorm/rehype), so you can include any plugins for either of these tools.
@@ -124,7 +125,7 @@ As the parsed Markdown is passed into [rehype](https://github.com/wooorm/rehype)
 
 ### Adding code highlighting
 
-react-markdown-loader doesn't support code highlighting out of the box, but it's pretty easy to add it! First, install `rehype-highlight` using `npm`:
+react-markdown-loader doesn't support code highlighting out of the box, but it's pretty easy to add it! First, install [`rehype-highlight`](https://github.com/rehypejs/rehype-highlight) using `npm`:
 
 ```bash
 npm install --save rehype-highlight

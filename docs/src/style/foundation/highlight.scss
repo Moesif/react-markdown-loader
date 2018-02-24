@@ -1,0 +1,32 @@
+/*
+  Tomorrow Theme
+  http://jmblog.github.com/color-themes-for-google-code-highlightjs
+*/
+
+.hljs-comment, .hljs-title {
+  color: #8e908c;
+}
+
+.hljs-variable, .hljs-attribute, .hljs-tag, .hljs-regexp, .language-ruby .hljs-constant, .language-html .hljs-doctype, .language-css .hljs-id {
+  color: #cc6666;
+}
+
+.hljs-number, .hljs-preprocessor, .hljs-built_in, .hljs-literal, .hljs-params, .hljs-constant {
+  color: #f5871f;
+}
+
+.hljs-class, .language-ruby .hljs-class .hljs-title {
+  color: #eab700;
+}
+
+.hljs-string, .hljs-value, .hljs-inheritance, .hljs-header, .language-ruby .hljs-symbol {
+  color: #718c00;
+}
+
+.hljs-function, .language-ruby .hljs-function .hljs-title, .language-ruby .hljs-title .hljs-keyword, .language-javascript .hljs-title {
+  color: #4271ae;
+}
+
+.hljs-keyword, .language-javascript .hljs-function {
+  color: #8959a8;
+}

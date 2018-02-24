@@ -1,0 +1,33 @@
+@import 'foundation';
+
+$icon-spacing: spacing(1);
+
+.container {
+  margin-bottom: spacing(6);
+
+  @include media-min($layout-breakpoint) {
+    margin-bottom: 0;
+    width: 30%;
+  }
+}
+
+.content {
+  @include card();
+}
+
+.check {
+  margin: spacing(6) 0 spacing(2);
+  font-size: font-size(smaller);
+  text-transform: uppercase;
+  font-weight: font-weight(bold);
+  color: color(gray);
+}
+
+.icons {
+  @include horizontal-flex();
+
+  > a {
+    margin-left: $icon-spacing;
+    margin-right: $icon-spacing;
+  }
+}

@@ -1,0 +1,32 @@
+$viewports: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+@function viewport($variant: md) {
+  $value: map-get($viewports, $variant);
+
+  @if type-of($value) == number {
+    @return $value;
+  } @else {
+    @error 'Viewport `#{$variant}` variant not found';
+  }
+}
+
+@mixin media-min($variant: md) {
+  $width: viewport($variant);
+
+  @media only screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin media-max($variant: md) {
+  $width: viewport($variant);
+
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}

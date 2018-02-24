@@ -1,0 +1,36 @@
+$color-palette: (
+  primary: (
+    lighter: #eff8ff,
+    light: #6CB2EB,
+    base: #3490DC,
+    dark: #2779BD
+  ),
+  gray: (
+    lighter: #f8fafc,
+    light: #DAE1E7,
+    base: #B8C2CC,
+    dark: #8795A1
+  ),
+  text: (
+    light: #8795a1,
+    base: #3d4852,
+    dark: #22292f
+  ),
+  white: (
+    base: #fff
+  )
+);
+
+@function color($hue, $value: base) {
+  $color: map-get(map-get($color-palette, $hue), $value);
+  
+  @if map-has-key($color-palette, $color) {
+    $color: map-get(map-get($color-palette, $color), $value);
+  }
+
+  @if type-of($color) == color {
+    @return $color;
+  } @else {
+    @error 'Color `#{$hue} - #{$value}` not found';
+  }
+}

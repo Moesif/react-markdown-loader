@@ -1,0 +1,138 @@
+/*
+  Fork of modern-normalize by Sindre Sorhus | MIT License
+  https://github.com/sindresorhus/modern-normalize/
+*/
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: $default-font-size;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: font-family();
+  line-height: line-height();
+  overflow-x: hidden;
+  background-color: #fff;
+  color: color(text);
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  color: color(primary);
+  background-color: transparent;
+
+  &:active,
+  &:hover {
+    outline-width: 0;
+  }
+
+  &:visited {
+    color: color(primary, dark);
+  }
+}
+
+p {
+  font-size: font-size();
+  margin-top: 0;
+  margin-bottom: spacing();
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+strong {
+  font-weight: font-weight(bold);
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+}
+
+// Code formatting
+
+code,
+pre {
+  font-size: 1em;
+  font-family: font-family(mono);
+}
+
+pre {
+  padding: spacing();
+  background-color: color(gray, light);
+}
+
+code {
+  color: color(text);
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: line-height();
+  tab-size: 4;
+  hyphens: none;
+  font-weight: font-weight();
+}
+
+// Tables
+
+table {
+  width: 100%;
+  border-radius: spacing();
+  border-collapse: collapse;
+}
+
+thead {
+  font-weight: font-weight(medium);
+  color: color(text, dark);
+  background-color: color(gray, lighter);
+
+  > tr > th {
+    padding: spacing(2);
+  }
+}
+
+tr {
+  border: 1px solid color(gray, light);
+}
+
+tbody > tr > td {
+  padding: spacing(2);
+  font-size: font-size(small);
+}
+
+blockquote {
+  margin: 0;
+  margin-bottom: spacing();
+  padding: spacing(2) spacing();
+  border-left: spacing(1) solid color(primary);
+
+  > p {
+    margin-bottom: 0;
+  }
+}

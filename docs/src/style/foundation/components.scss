@@ -1,0 +1,10 @@
+$card-pad: spacing() spacing(6);
+$card-shadow: 0 15px 30px 0 rgba(0,0,0,.11), 0 5px 15px 0 rgba(0,0,0,.08);
+$layout-breakpoint: md;
+
+@mixin card($bg: color(white)) {
+  padding: $card-pad;
+  border-radius: spacing();
+  background-color: $bg;
+  box-shadow: $card-shadow;
+}
