@@ -148,8 +148,8 @@ Next, open any JavaScript file on your project and add the `frontMatter` variabl
 ```javascript
 import Document, { frontMatter } from './document.md';
 
-// Will print 'https://google.com'
 console.log(frontMatter.googleUrl);
+// → 'https://google.com'
 ```
 
 ## Examples
