@@ -121,6 +121,10 @@ As the parsed Markdown is passed into [rehype](https://github.com/wooorm/rehype)
 };
 ```
 
+### Accessing the frontmatter
+
+TODO
+
 ## Examples
 
 ### Adding code highlighting

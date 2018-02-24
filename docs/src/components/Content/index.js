@@ -16,6 +16,14 @@ export default class Content extends React.PureComponent {
               GitHub
             </a>
           </Lead>
+          <div>
+            The following example was rendered by react-markdown-loader and uses
+            the{' '}
+            <a href="https://github.com/rehypejs/rehype-highlight">
+              rehype-highlight
+            </a>{' '}
+            plugin to highlight the code examples on the server:
+          </div>
         </header>
         <ExampleMarkdown />
       </div>

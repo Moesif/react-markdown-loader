@@ -14,7 +14,7 @@ export default class Sidebar extends React.PureComponent {
             Transform Markdown with interpolated JS expressions and JSX elements
             into React component Webpack modules.
           </Lead>
-          <p>Check it out on:</p>
+          <p className={styles.check}>Check it out on:</p>
           <IconRow className={styles.icons} />
         </div>
       </div>
