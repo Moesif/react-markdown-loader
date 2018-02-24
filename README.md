@@ -121,9 +121,36 @@ As the parsed Markdown is passed into [rehype](https://github.com/wooorm/rehype)
 };
 ```
 
-### Accessing the frontmatter
+### Accessing the front matter
 
-TODO
+To access the front matter variables from your Markdown document, you can use the JSX `{{}}` delimiters:
+
+```markdown
+---
+title: Hello world
+---
+
+# {{ frontMatter.title }}
+```
+
+You can also access them from your project as we export the `frontMatter` variable from the produced module. First, create a Markdown document:
+
+```markdown
+---
+googleUrl: https://google.com
+---
+
+Hi!
+```
+
+Next, open any JavaScript file on your project and add the `frontMatter` variable to your import:
+
+```javascript
+import Document, { frontMatter } from './document.md';
+
+// Will print 'https://google.com'
+console.log(frontMatter.googleUrl);
+```
 
 ## Examples
 

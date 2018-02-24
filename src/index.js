@@ -5,7 +5,15 @@ export default function(source) {
   const options = getOptions(this) || {};
   this.cacheable();
 
-  return toComponentModule(source, options);
+  const output = toComponentModule(source, options);
+
+  return;
+}
+
+const frontMatterStmt = 'const frontMatter';
+
+function exportFrontMatter(output) {
+  return output.replace(frontMatterStmt, `export ${frontMatterStmt}`);
 }
 
 function getOptions(context) {
