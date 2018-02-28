@@ -17,6 +17,8 @@ Transform Markdown with interpolated JS expressions and JSX elements into React 
 * Supports code highlighting by using [rehype-highlight](https://github.com/rehypejs/rehype-highlight) (Check out the [tutorial](#adding-code-highlighting)).
 * Markdown gets processed through [remark](https://github.com/wooorm/remark) and [rehype](https://github.com/wooorm/rehype), so you can include any plugins for either of these tools.
 
+You can visit the [Docs](https://react-markdown-loader.netlify.com/) webpage to check out an example that uses most of these features, including code highlighting.
+
 ## Getting Started
 
 Install react-markdown-loader using [`npm`](https://www.npmjs.com/):
