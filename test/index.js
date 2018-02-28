@@ -1,4 +1,5 @@
 import loader from '../src/index';
+import stripIndent from 'strip-indent';
 
 const compile = (input, options) => {
   // Mock webpack loader options
@@ -10,21 +11,40 @@ const compile = (input, options) => {
   return loaderFn(input);
 };
 
+const prepareText = text => stripIndent(text).trim();
+
+const fakeDocument = prepareText(`
+---
+title: Hello world
+imports:
+  test: './test'
+---
+
+# Hello world
+`);
+
+let compiled;
+
 describe('react-markdown-loader', () => {
   describe('compiler', () => {
-    it('should contain react import', () => {
-      expect(compile('')).toEqual(
-        expect.stringContaining('import React from "react";')
-      );
+    it('should compile correctly', () => {
+      compiled = compile(fakeDocument);
+
+      expect(compiled).toMatch("import React from 'react';");
     });
 
-    it('should handle a basic string', () => {
-      expect(compile('Test')).toEqual(expect.stringContaining('<p>Test</p>'));
+    it('should convert content correctly', () => {
+      expect(compiled).toMatch('<h1>Hello world</h1>');
     });
 
-    it('should handle headings correctly', () => {
-      expect(compile('# Hello World')).toEqual(
-        expect.stringContaining('<h1>Hello World</h1>')
+    it('should export the front matter', () => {
+      expect(compiled).toMatch('export const frontMatter =');
+      expect(compiled).toMatch("title: 'Hello world'");
+    });
+
+    it('should import module from frontmatter', () => {
+      expect(compiled).toEqual(
+        expect.stringContaining("import test from './test';")
       );
     });
   });

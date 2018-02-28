@@ -1,25 +1,18 @@
 import { getOptions as getWebpackOptions } from 'loader-utils';
 import { toComponentModule } from '@mapbox/jsxtreme-markdown';
+import transform from './transformer';
 
 export default function(source) {
   const options = getOptions(this) || {};
   this.cacheable();
 
-  const output = toComponentModule(source, options);
-
-  return;
-}
-
-const frontMatterStmt = 'const frontMatter';
-
-function exportFrontMatter(output) {
-  return output.replace(frontMatterStmt, `export ${frontMatterStmt}`);
+  return toComponentModule(source, options);
 }
 
 function getOptions(context) {
   return {
     ...getWebpackOptions(context),
-    name: 'ReactMarkdown',
+    template: transform,
     // TODO Could we compile with Babel?
     precompile: false
   };

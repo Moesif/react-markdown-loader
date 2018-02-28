@@ -8,6 +8,7 @@
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "stringify-object": "^3.2.2",
     "tapable": "^1.0.0"
   },
   "devDependencies": {

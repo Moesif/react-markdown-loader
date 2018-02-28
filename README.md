@@ -143,7 +143,7 @@ googleUrl: https://google.com
 Hi!
 ```
 
-Next, open any JavaScript file on your project and add the `frontMatter` variable to your import:
+Finally, open any JavaScript file on your project and add the `frontMatter` variable to your import:
 
 ```javascript
 import Document, { frontMatter } from './document.md';
