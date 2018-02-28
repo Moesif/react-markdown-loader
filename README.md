@@ -74,7 +74,7 @@ Add the following import to your `Component.js`:
 
 ```js
 import React from 'react';
-import HelloWorld from 'hello-world.md';
+import HelloWorld from './hello-world.md';
 
 export default class BlogPost extends React.PureComponent {
   render() {
