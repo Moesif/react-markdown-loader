@@ -1,6 +1,6 @@
 {
   "name": "@hugmanrique/react-markdown-loader",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "description": "Webpack GitHub-flavored Markdown (GFM) loader",
   "keywords": [
