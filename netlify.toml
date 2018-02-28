@@ -1,5 +1,4 @@
 [build]
-  base = "docs"
+  base = ""
   publish = "docs/dist"
-  # Install base dependencies
-  command = "cd ../ && npm i && npm run build"
+  command = "./scripts/netlifyBuild.sh"
