@@ -10,7 +10,6 @@ const highlight = require('rehype-highlight');
 
 module.exports = {
   entry: appPath,
-  mode: 'development',
   output: {
     filename: '[name].js',
     path: distPath
@@ -25,14 +24,15 @@ module.exports = {
       {
         test: /\.md$/,
         // Use @hugmanrique/react-markdown-loader instead
-        use: ['babel-loader', {
-          loader: path.resolve(__dirname, '..'),
-          options: {
-            rehypePlugins: [
-              require('rehype-highlight')
-            ]
+        use: [
+          'babel-loader',
+          {
+            loader: path.resolve(__dirname, '..'),
+            options: {
+              rehypePlugins: [require('rehype-highlight')]
+            }
           }
-        }]
+        ]
       },
       {
         test: /\.scss$/,
