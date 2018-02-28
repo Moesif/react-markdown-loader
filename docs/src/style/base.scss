@@ -85,7 +85,7 @@ pre {
   padding: spacing();
   background-color: color(gray, light);
   border-radius: spacing(1);
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 code {
