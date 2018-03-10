@@ -24,7 +24,7 @@ You can visit the [Docs](https://react-markdown-loader.netlify.com/) webpage to 
 Install react-markdown-loader using [`npm`](https://www.npmjs.com/):
 
 ```bash
-npm install --save react-markdown-loader
+npm install --save @hugmanrique/react-markdown-loader
 ```
 
 Or via [`yarn`](https://yarnpkg.com/en/package/@hugmanrique/react-markdown-loader):
