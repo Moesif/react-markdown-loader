@@ -3,12 +3,7 @@
   "version": "0.0.2",
   "license": "MIT",
   "description": "Webpack GitHub-flavored Markdown (GFM) loader",
-  "keywords": [
-    "webpack",
-    "loader",
-    "markdown",
-    "react"
-  ],
+  "keywords": ["webpack", "loader", "markdown", "react"],
   "homepage": "https://github.com/hugmanrique/react-markdown-loader",
   "bugs": {
     "url": "https://github.com/hugmanrique/react-markdown-loader/issues"
@@ -18,10 +13,7 @@
     "url": "https://hugmanrique.me",
     "email": "npm@hugmanrique.me"
   },
-  "files": [
-    "dist",
-    "README.md"
-  ],
+  "files": ["dist", "README.md"],
   "main": "dist/cjs.js",
   "repository": {
     "type": "git",
@@ -29,7 +21,8 @@
   },
   "scripts": {
     "prebuild": "npm run clean",
-    "build": "cross-env NODE_ENV=production babel src -d dist --ignore 'src/**/*.test.js'",
+    "build":
+      "cross-env NODE_ENV=production babel src -d dist --ignore 'src/**/*.test.js'",
     "clean": "del-cli dist",
     "prepublish": "npm run build",
     "release": "standard-version",
@@ -37,30 +30,25 @@
     "test": "jest"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0-beta.40",
-    "@babel/core": "^7.0.0-beta.40",
-    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.40",
-    "@babel/preset-env": "^7.0.0-beta.40",
+    "@babel/cli": "^7.0.0-beta.46",
+    "@babel/core": "^7.0.0-beta.46",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.46",
+    "@babel/preset-env": "^7.0.0-beta.46",
     "babel-core": "^7.0.0-bridge.0",
-    "cross-env": "^5.1.3",
+    "cross-env": "^5.1.4",
     "del-cli": "^1.1.0",
-    "jest": "^22.4.2",
+    "jest": "^22.4.3",
     "standard-version": "^4.3.0",
     "strip-indent": "^2.0.0"
   },
   "dependencies": {
-    "@mapbox/jsxtreme-markdown": "^0.7.3",
+    "@mapbox/jsxtreme-markdown": "^0.9.0",
     "loader-utils": "^1.1.0"
   },
   "jest": {
     "testEnvironment": "node",
-    "coverageReporters": [
-      "text",
-      "html"
-    ],
-    "testMatch": [
-      "**/test/*.js"
-    ]
+    "coverageReporters": ["text", "html"],
+    "testMatch": ["**/test/*.js"]
   },
   "engines": {
     "node": ">=6.11.5"
