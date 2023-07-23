@@ -13,11 +13,7 @@
   "bugs": {
     "url": "https://github.com/moesif/react-markdown-loader/issues"
   },
-  "author": {
-    "name": "Hugo Manrique",
-    "url": "https://hugmanrique.me",
-    "email": "npm@hugmanrique.me"
-  },
+  "author": "Hugo Manrique <npm@hugmanrique.me> (https://hugmanrique.me)",
   "files": [
     "dist",
     "README.md"
@@ -25,7 +21,7 @@
   "main": "dist/cjs.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/moesif/react-markdown-loader"
+    "url": "git+https://github.com/moesif/react-markdown-loader.git"
   },
   "scripts": {
     "prebuild": "npm run clean",
@@ -67,5 +63,9 @@
   },
   "peerDependencies": {
     "webpack": "^3.0.0 || ^4.0.0"
+  },
+  "directories": {
+    "doc": "docs",
+    "test": "test"
   }
 }
